@@ -1,12 +1,110 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>ELF AUDIO - dev resources</title>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+<style type="text/css">
+	body {
+		margin:0;
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	#nav {
+		background-color: #332F2B;
+		padding: 0.5em;
+		display: flex; 
+		align-items: center;
+	}
+	#nav img {
+		width: 4em;
+		margin-right: 1em;
+	}
+	
+	#nav .title {
+		font-size: 2em;
+		color: white;
+		font-weight: 100;
+	}
+	#nav .title, h1, h2 {
+		font-family: 'Quicksand', Helvetica, Sans-serif;
+	}
+	main {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+</style>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-<img src="img/logo.svg" />
+	<div id="nav">
+		<img src="img/logo.svg" /> 
+		<span class="title">dev resources</span>
+	</div>
+  
+<main>
+	<div id="cppsketch">
+	<h1>cppsketch</h1>
+	<p>cppsketch is a simple system for hot-reloading C++ classes in order to sketch ideas and algorithms - more here: <a href="https://github.com/elf-audio/cppsketch">https://github.com/elf-audio/cppsketch</a>. Also check the video below.
+	</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/-JlMIAOluUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<p>
+		Also there's a version for openFrameworks, which is an awesome graphics and interaction toolkit for C++ - check the addon here: <a href="https://github.com/elf-audio/ofxCppSketch">https://github.com/elf-audio/ofxCppSketch</a>
+	</p>
+</div>
+	<div id="resources">
+		<h1>resources</h1>
+	
+
+<h2>Resources about interaction design</h2>
+
+<ul>
+
+<li><a href="https://asktog.com/atc/principles-of-interaction-design/">First Principles of Interaction Design (Revised & Expanded)
+</a>  - by Bruce Tognazzini</li>
+<li><a href="https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design">Dieter Rams' 10 commandments of good design</li>
+<li>Good book: <a href="https://www.amazon.co.uk/Design-Everyday-Things-MIT-Press/dp/0262525674">The design of everyday things</a></li>
+<li>Good resource for seeing how differently people make music: <a href="https://www.factmag.com/tag/against-the-clock/">FACT: Against the clock</a></li>
+</ul>
+
+<h2>General audio programming resources</h2>
+<ul>
+<li><a href="http://www.musicdsp.org">musicdsp.org</a></li>
+<li><a href="https://www.kvraudio.com/forum/viewforum.php?f=33">KVR DSP Dev forum</a></li>
+<li><a href="http://sites.music.columbia.edu/cmc/music-dsp/">Musicdsp mailing list</a></li>
+<li><a href="http://shepazu.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.html">RBJ filter cookbook</a></li>
+<li><a href="https://www.youtube.com/channel/UCaF6fKdDrSmPDmiZcl9KLnQ">Juce/ADC youtube channel</a></li>
+<li><a href="https://github.com/cameron314/readerwriterqueue">Moodycamel ReaderWriterQueue</a> </li>
+<li><a href="https://github.com/micknoise/Maximilian">Maximillian</a></li>
+<li><a href="http://www.earlevel.com/">earlevel</a> </li>
+<li><a href="https://github.com/pichenettes/eurorack">Mutable instruments source code</a></li>
+<li><a href="https://www.discodsp.net/VAFilterDesign_2.1.0.pdf">The Art of VA Filter Design</a></li>
+<li><a href="http://www.willpirkle.com/forum/algorithm-design/">RackAFX Forum</a></li>
+</ul>
+
+<!--
+<h2>Great programs</h2>
+
+<ul>
+<li>sketch for laying out</li>
+<li>Python for trying stuff out</li>
+<li>Pd for making effects</li>
+<li>Eizen audio for converting of patches to c code</li>
+<li>Arthur’s web based audio coding environment</li>
+</ul>
+-->
+<h2>Great libraries</h2>
+
+<ul>
+<li><a href="http://kymatica.com/apps/audioshare#audioshare-sdk">Audioshare</a></li>
+<li><a href="https://developer.audiob.us/">Audiobus</a></li>
+<li><a href="https://openframeworks.cc/">Openframeworks</a></li>
+<li><a href="https://libcinder.org/">Cinder</a></li>
+</ul>
+
+<h1>IOS stuff</h1>
+
+<ul>
+<li><a href="http://devnotes.kymatica.com/">Kymatica Dev Notes</a></li>
+</ul>
+	</div>
+</main>
 </body>
 </html>
