@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>elf audio: CUSTOM GUITAR: JOHN MOSHER</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			.page {
+				color: white;
+				padding: 1em;
+				background-color: #333;
+				font-family: "Nunito", sans-serif;
+			}
+			h1,
+			h2 {
+				font-family: "Oswald", sans-serif;
+			}
+			#container {
+				position: relative;
+				width: 100%; /* Adjust as needed */
+				height: 50vw; /* Adjust as needed */
+			}
+
+			.svg-image {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: opacity 0.1s ease;
+			}
+
+			td {
+				color: white;
+			}
+			td:nth-child(1) {
+				font-weight: bold;
+			}
+			td:nth-child(3) {
+				font-style: italic;
+				font-size: 0.8em;
+				color: #bbb;
+			}
+
+			.slider {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.slider span {
+				padding: 1em;
+				text-align: center;
+			}
+			#header {
+				text-align: center;
+				margin-bottom: 2em;
+			}
+			#header img {
+				width: 10vh;
+			}
+
+			.separator {
+				margin: 2em;
+				width: 4em;
+			}
+			.hoverSpin {
+				-webkit-transition: -webkit-transform 0.4s ease-in-out;
+				transition: transform 0.4s ease-in-out;
+			}
+
+			.hoverSpin:hover {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+			#footer {
+				text-align: center;
+			}
+			#footer img {
+				display: inline-block;
+			}
+			#footer span {
+				display: block;
+			}
+		</style>
+
+		<!-- import bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+	</head>
+	<body>
+		<div class="page">
+			<div id="header">
+				<img src="https://www.elf-audio.com/img/logo.svg" />
+			</div>
+			<h1>CUSTOM GUITAR: JOHN MOSHER</h1>
+			<h2>DESIGN DRAFT</h2>
+			<p>
+				This design is losely based on a stratocaster, but with some
+				modifications:
+			</p>
+			<ul>
+				<li>
+					Made the cutaways sharper (the 'horns' of the body either
+					side of the neck)
+				</li>
+				<li>
+					Made the bottom of the body rounder (e.g. the bit to the
+					left of the bridge)
+				</li>
+				<li>
+					Moved controls further away from strings and picking hand
+				</li>
+				<li>
+					Made top right of scrachplate pointier and flow better with
+					the design (inspired by japanese vintage guitars)
+				</li>
+				<li>Square inlays similar to Gibson guitars</li>
+				<li>
+					Gave the top carve (where your right arm rests) a slight
+					radius
+				</li>
+				<li>
+					Removed front mounted jack socket in favour of side mounted.
+				</li>
+				<li>Redesigned headstock for 3 x 3 layout.</li>
+			</ul>
+			<div id="container">
+				<img src="moshcaster.svg" class="svg-image" id="svg1" />
+				<img
+					src="strat.svg"
+					class="svg-image"
+					id="svg2"
+					style="opacity: 0"
+				/>
+			</div>
+
+			<p>
+				The slider below lets you slide between the design I have made
+				and a standard stratocaster so you can see the similarities and
+				differences more clearly.
+			</p>
+			<div class="slider">
+				<span>Your Guitar</span>
+				<input type="range" id="slider" min="0" max="100" value="0" />
+				<span>Stratocaster</span>
+			</div>
+
+			<h2>SPEC</h2>
+			<table class="table table-striped">
+				<tr>
+					<td>Scale Length</td>
+					<td>25.5"</td>
+					<td>Like strat/tele</td>
+				</tr>
+				<tr>
+					<td>Body material</td>
+					<td>Swamp ash</td>
+					<td>Classic fender type wood</td>
+				</tr>
+				<tr>
+					<td>Body finish</td>
+					<td>Black distressed (relic'd)</td>
+					<td>
+						Perhaps paint cyan/blue under top coat to show through
+						with relic-ing
+					</td>
+				</tr>
+
+				<tr>
+					<td>Neck material</td>
+					<td>'AAA' Hard maple</td>
+					<td>One piece, carbon fibre reinfoced under fingerboard</td>
+				</tr>
+
+				<tr>
+					<td>Fingerboard</td>
+					<td>Rosewood</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Fingerboard radius</td>
+					<td>10.5"</td>
+					<td>
+						Slightly flatter than a strat or tele - enough to bend
+						string at higher frets
+					</td>
+				</tr>
+				<tr>
+					<td>Fret inlays</td>
+					<td>rectangular</td>
+					<td>(material tbd)</td>
+				</tr>
+
+				<tr>
+					<td>Fret size</td>
+					<td>6105</td>
+					<td>
+						Modern style of frets, slightly taller and wider than
+						traditional, better sustain and easier to press, bend
+						and vibrato
+					</td>
+				</tr>
+
+				<tr>
+					<td>Nut</td>
+					<td>Tusq</td>
+					<td>
+						(artificial ivory) - better sustain and tuning
+						stability, best for tremolo
+					</td>
+				</tr>
+				<tr>
+					<td>Tuning heads</td>
+					<td>locking</td>
+					<td>(model tbd)</td>
+				</tr>
+
+				<tr>
+					<td>Pickups</td>
+					<td>2x Les Paul style humbuckers</td>
+					<td>Duncan '59 or similar. one angled at the bridge</td>
+				</tr>
+				<tr>
+					<td>Bridge</td>
+					<td>Modern tremolo system</td>
+					<td>(model tbd)</td>
+				</tr>
+			</table>
+
+			<div id="footer">
+				<img
+					class="separator hoverSpin"
+					src="https://www.elf-audio.com/img/venn.svg"
+				/>
+				<span>&copy; elf audio 2024</span>
+			</div>
+		</div>
+
+		<script>
+			document
+				.getElementById("slider")
+				.addEventListener("input", function () {
+					var value = this.value
+					document.getElementById("svg1").style.opacity =
+						(100 - value) / 100
+					document.getElementById("svg2").style.opacity = value / 100
+				})
+		</script>
+	</body>
+</html>
