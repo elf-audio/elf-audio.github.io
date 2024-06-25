@@ -87,6 +87,14 @@
 			#footer span {
 				display: block;
 			}
+            .caption {
+                display: block;
+                color: #bbb;
+            }
+            img {
+                max-width: 30em;
+                margin-bottom: 3em;
+            }
 		</style>
 
 		<!-- import bootstrap -->
@@ -101,164 +109,84 @@
 				<img src="https://www.elf-audio.com/img/logo.svg" />
 			</div>
 			<h1>CUSTOM GUITAR: JOHN MOSHER</h1>
-			<h2>DESIGN DRAFT</h2>
-			<p>
-				Inspired by the iconic Stratocaster, this guitar boasts a sleek,
-				retro aesthetic with sharper cutaways and scratchplate design,
-				influenced by Japanese vintage designs.
-			</p>
-			<p>
-				I started with the Stratocaster design and made the following
-				changes:
-			</p>
-			<ul>
-				<li>
-					Made the cutaways sharper (the 'horns' of the body either
-					side of the neck)
-				</li>
-				<li>
-					Made the bottom of the body rounder (e.g. the bit to the
-					left of the bridge)
-				</li>
-				<li>
-					Moved controls further away from strings and picking hand
-				</li>
-				<li>
-					Made top right of scratchplate pointier for flow better with
-					the design (inspired by japanese vintage guitars, kind of
-					looks more wave-like than a strat)
-				</li>
-				<li>Square inlays similar to Gibson guitars</li>
-				<li>
-					Gave the top carve (where your right arm rests) a slight
-					radius
-				</li>
-				<li>
-					Removed front mounted jack socket in favour of side mounted.
-				</li>
-				<li>Redesigned headstock for 3 x 3 layout.</li>
-			</ul>
-			<div id="container">
-				<img src="moshcaster.svg" class="svg-image" id="svg1" />
-				<img
-					src="strat.svg"
-					class="svg-image"
-					id="svg2"
-					style="opacity: 0"
-				/>
-			</div>
+			<h2>WORK IN PROGRESS - last updated 25/06/24</h2>
+            <p>Sorry for the slow update! Took me a while to find all 
+                the materials but I think I have everything now. I've 
+                mostly been working on the neck which is always the lion's 
+                share of the work</p>
 
-			<p>
-				The slider below lets you slide between the design I have made
-				and a standard stratocaster so you can see the similarities and
-				differences more clearly.
-			</p>
-			<div class="slider">
-				<span>Your Guitar</span>
-				<input type="range" id="slider" min="0" max="100" value="0" />
-				<span>Stratocaster</span>
-			</div>
+            <h3>Neck</h3>
 
-			<h2>SPEC</h2>
-			<table class="table table-striped">
-				<tr>
-					<td>Scale Length</td>
-					<td>25.5"</td>
-					<td>Like strat/tele</td>
-				</tr>
-				<tr>
-					<td>Body material</td>
-					<td>Swamp ash</td>
-					<td>Classic fender type wood</td>
-				</tr>
-				<tr>
-					<td>Body finish</td>
-					<td>Black distressed (relic'd)</td>
-					<td>
-						Perhaps paint cyan/blue under top coat to show through
-						with relic-ing
-					</td>
-				</tr>
+            <span class="caption">Neck is made in 3 parts, its a scarf joint which is traditional for a les paul, but with an extra laminate on top to hide the joint from the front as we're going for a clear finish</span>
+            <img src="photos/necksplice.jpeg"/>
 
-				<tr>
-					<td>Neck material</td>
-					<td>'AAA' Hard maple</td>
-					<td>One piece, carbon fibre reinfoced under fingerboard</td>
-				</tr>
 
-				<tr>
-					<td>Fingerboard</td>
-					<td>Rosewood</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Fingerboard radius</td>
-					<td>10.5"</td>
-					<td>
-						Slightly flatter than a strat or tele - enough to bend
-						string at higher frets
-					</td>
-				</tr>
-				<tr>
-					<td>Fret inlays</td>
-					<td>rectangular</td>
-					<td>(material tbd)</td>
-				</tr>
+            <span class="caption">Gluing the first bit</span>
+            <img src="photos/neckglue.jpeg" />
 
-				<tr>
-					<td>Fret size</td>
-					<td>6105</td>
-					<td>
-						Modern style of frets, slightly taller and wider than
-						traditional, better sustain and easier to press, bend
-						and vibrato
-					</td>
-				</tr>
+            <span class="caption">this is the front maple laminate</span>
+            <img src="photos/final-splice.jpeg" />
 
-				<tr>
-					<td>Nut</td>
-					<td>Tusq</td>
-					<td>
-						(artificial ivory) - better sustain and tuning
-						stability, best for tremolo
-					</td>
-				</tr>
-				<tr>
-					<td>Tuning heads</td>
-					<td>locking</td>
-					<td>(model tbd)</td>
-				</tr>
+            <span class="caption">and gluing it on - you can see that the front surface is not flat yet</span>
+            <img src="photos/neck laminate.jpeg"/>
 
-				<tr>
-					<td>Pickups</td>
-					<td>2x Les Paul style humbuckers</td>
-					<td>Duncan '59 or similar. one angled at the bridge</td>
-				</tr>
-				<tr>
-					<td>Bridge</td>
-					<td>Modern tremolo system</td>
-					<td>(model tbd)</td>
-				</tr>
-			</table>
 
-			<div id="footer">
-				<img
-					class="separator hoverSpin"
-					src="https://www.elf-audio.com/img/venn.svg"
-				/>
-				<span>&copy; elf audio 2024</span>
-			</div>
-		</div>
+            <span class="caption">making the front surface of the head flat and square</span>
+            <img src="photos/neckflatten.jpeg"/>
+            
+            <span class="caption">The neck gets roughly bandsawed out then routed very accurately (not pictured is the routing of th truss rod and carbon fibre reinforcement channels)</span> 
+            <img src="photos/neck shape.jpeg" />
 
-		<script>
-			document
-				.getElementById("slider")
-				.addEventListener("input", function () {
-					var value = this.value
-					document.getElementById("svg1").style.opacity =
-						(100 - value) / 100
-					document.getElementById("svg2").style.opacity = value / 100
-				})
-		</script>
+
+            
+
+
+
+            <h3>Head</h3>
+     
+            
+
+
+            <span class="caption">To make the head shape perfectly accurate I 3d printed a template to rout around with a template bit</span>
+            <img src="photos/head template before.jpeg" />
+
+            <span class="caption">After routing (and a better template)</span>
+            <img src="photos/head template.jpeg" />
+
+            <span class="caption">Roughing out the volute on the back of the neck to make it super comfortable to play</span>
+            <img src="photos/head contour.jpeg" />
+
+            <span class="caption">final neck before gluing the fretboard and carving the back</span>
+            
+            <img src="photos/routed out truss.jpeg" />
+
+
+
+            <h3>Fretboard</h3>
+            <span class="caption">I 3d printed a sanding block to make sure the radius is perfect. not done photos of the actual fingerboard yet</span>
+            <img src="photos/sandingblock.jpeg" />
+            <span class="caption">rough cut the perloid</span>
+            <img src="photos/cut out perloid.jpeg" />
+            
+            <span class="caption">slowly sanding back to the scalpel lines to ensure tiny tolerances for inlay</span>
+            <img src="photos/cut out perloid2.jpeg" />
+
+
+
+            
+
+
+
+            <h3>Body</h3>
+            <span class="caption">Made a plywood template for the body for rough bandsawing followed by precision routing</span>
+<img src="photos/body template.jpeg" />
+
+
+
+<span class="caption">roughed out on bandsaw - leaving the area around the neck pocket as you don't want to do that until neck reaches its final dimensions to ensure a snug fit.</span>
+<img src="photos/roughed out body.jpeg" />
+
+<br /><br />
+<a href="design.html">(design draft doc)</a>
 	</body>
 </html>
