@@ -87,16 +87,90 @@
 			#footer span {
 				display: block;
 			}
-            .caption {
-                display: block;
-                color: #bbb;
-            }
-            img {
-                max-width: 30em;
-                margin-bottom: 3em;
-            }
+			.caption {
+				border-top: 1px white solid;
+				display: block;
+				color: #bbb;
+				padding: 1em 0;
+			}
+			img {
+				max-width: 100%;
+				margin-bottom: 3em;
+			}
+
+			/* CSS */
+			/* Style for the overlay */
+			.lightbox-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.7);
+				display: none;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* Style for the displayed image */
+			.lightbox-image {
+				max-width: 90%;
+				max-height: 80%;
+			}
 		</style>
 
+		<script>
+			// JavaScript
+			document.addEventListener("DOMContentLoaded", function () {
+				const images = document.querySelectorAll("img.lightbox")
+
+				images.forEach((img) => {
+					// Create an <a> element
+					const a = document.createElement("a")
+					// Replace 'photos/preview/' with 'photos/large/' in the img's src
+					const largeImgSrc = img.src.replace(
+						"photos/preview/",
+						"photos/large/"
+					)
+					// Set the href of the <a> to the modified src
+					a.href = largeImgSrc
+					// Optional: Set the data-lightbox attribute
+					a.setAttribute("data-lightbox", "image")
+					// Insert the <a> before the <img> in the DOM
+					img.parentNode.insertBefore(a, img)
+					// Remove the <img> from its current position
+					img.parentNode.removeChild(img)
+					// Append the <img> to the <a>
+					a.appendChild(img)
+				})
+
+				// Find all elements with data-lightbox attribute
+				const lightboxImages = document.querySelectorAll(
+					'a[data-lightbox="image"]'
+				)
+				const overlay = document.createElement("div")
+				overlay.classList.add("lightbox-overlay")
+				document.body.appendChild(overlay)
+
+				const img = document.createElement("img")
+				img.classList.add("lightbox-image")
+				overlay.appendChild(img)
+
+				lightboxImages.forEach((element) => {
+					element.addEventListener("click", function (e) {
+						e.preventDefault() // Prevent the default anchor action
+						const href = this.getAttribute("href")
+						img.src = href
+						overlay.style.display = "flex" // Show the overlay
+					})
+				})
+
+				// Close the overlay when clicked
+				overlay.addEventListener("click", function () {
+					this.style.display = "none"
+				})
+			})
+		</script>
 		<!-- import bootstrap -->
 		<link
 			rel="stylesheet"
@@ -110,83 +184,114 @@
 			</div>
 			<h1>CUSTOM GUITAR: JOHN MOSHER</h1>
 			<h2>WORK IN PROGRESS - last updated 25/06/24</h2>
-            <p>Sorry for the slow update! Took me a while to find all 
-                the materials but I think I have everything now. I've 
-                mostly been working on the neck which is always the lion's 
-                share of the work</p>
+			<p>
+				Sorry for the slow update! Took me a while to find all the
+				materials but I think I have pretty much everything now. I've
+				mostly been working on the neck which is always the lion's share
+				of the work.
+			</p>
 
-            <h3>Neck</h3>
+			<h3>Neck</h3>
 
-            <span class="caption">Neck is made in 3 parts, its a scarf joint which is traditional for a les paul, but with an extra laminate on top to hide the joint from the front as we're going for a clear finish</span>
-            <img src="photos/necksplice.jpeg"/>
+			<span class="caption"
+				>Neck is made in 3 parts, its a scarf joint which is traditional
+				for a les paul, but with an extra laminate on top to hide the
+				joint from the front as we're going for a clear finish</span
+			>
 
+			<img src="photos/preview/necksplice.jpeg" class="lightbox" />
 
-            <span class="caption">Gluing the first bit</span>
-            <img src="photos/neckglue.jpeg" />
+			<span class="caption">Gluing the first bit</span>
+			<img src="photos/preview/neckglue.jpeg" class="lightbox" />
 
-            <span class="caption">this is the front maple laminate</span>
-            <img src="photos/final-splice.jpeg" />
+			<span class="caption">this is the front maple laminate</span>
+			<img src="photos/preview/final-splice.jpeg" class="lightbox" />
 
-            <span class="caption">and gluing it on - you can see that the front surface is not flat yet</span>
-            <img src="photos/neck laminate.jpeg"/>
+			<span class="caption"
+				>and gluing it on - you can see that the front surface is not
+				flat yet</span
+			>
+			<img src="photos/preview/neck laminate.jpeg" class="lightbox" />
 
+			<span class="caption"
+				>Planing the front surface of the head flat and square</span
+			>
+			<img src="photos/preview/neckflatten.jpeg" class="lightbox" />
 
-            <span class="caption">making the front surface of the head flat and square</span>
-            <img src="photos/neckflatten.jpeg"/>
-            
-            <span class="caption">The neck gets roughly bandsawed out then routed very accurately (not pictured is the routing of th truss rod and carbon fibre reinforcement channels)</span> 
-            <img src="photos/neck shape.jpeg" />
+			<span class="caption"
+				>The neck gets roughly bandsawed out then routed very accurately
+				(not pictured is the routing of th truss rod and carbon fibre
+				reinforcement channels)</span
+			>
+			<img src="photos/preview/neck shape.jpeg" class="lightbox" />
 
+			<h3>Head</h3>
 
-            
+			<span class="caption"
+				>To make the head shape perfectly accurate I 3d printed a
+				template to rout around with a template bit</span
+			>
+			<img
+				src="photos/preview/head template before.jpeg"
+				class="lightbox"
+			/>
 
+			<span class="caption">After routing (and a better template)</span>
+			<img src="photos/preview/head template.jpeg" class="lightbox" />
 
+			<span class="caption"
+				>Roughing out the volute on the back of the neck to make it
+				super comfortable to play</span
+			>
+			<img src="photos/preview/head contour.jpeg" class="lightbox" />
 
-            <h3>Head</h3>
-     
-            
+			<span class="caption"
+				>final neck before gluing the fretboard and carving the
+				back</span
+			>
 
+			<img src="photos/preview/neck before carve.jpeg" class="lightbox" />
 
-            <span class="caption">To make the head shape perfectly accurate I 3d printed a template to rout around with a template bit</span>
-            <img src="photos/head template before.jpeg" />
+			<h3>Fretboard</h3>
+			<span class="caption"
+				>3d printed sanding block to make sure the radius is perfectly
+				10.5 inches.</span
+			>
+			<img src="photos/preview/sandingblock.jpeg" class="lightbox" />
 
-            <span class="caption">After routing (and a better template)</span>
-            <img src="photos/head template.jpeg" />
+			<span class="caption"
+				>Fretboard after most of the sanding that needs to be done</span
+			>
+			<img src="photos/preview/fingerboard.jpeg" class="lightbox" />
 
-            <span class="caption">Roughing out the volute on the back of the neck to make it super comfortable to play</span>
-            <img src="photos/head contour.jpeg" />
+			<span class="caption">rough cut the perloid</span>
+			<img src="photos/preview/cut out perloid.jpeg" class="lightbox" />
 
-            <span class="caption">final neck before gluing the fretboard and carving the back</span>
-            
-            <img src="photos/routed out truss.jpeg" />
+			<span class="caption"
+				>slowly sanding back to the scalpel lines to ensure tiny
+				tolerances for inlay</span
+			>
+			<img src="photos/preview/cut out perloid2.jpeg" class="lightbox" />
 
+			<h3>Body</h3>
+			<span class="caption"
+				>Made a plywood template for the body for rough bandsawing
+				followed by precision routing</span
+			>
+			<img src="photos/preview/body template.jpeg" class="lightbox" />
 
+			<span class="caption"
+				>roughed out on bandsaw - leaving the area around the neck
+				pocket as you don't want to do that until neck reaches its final
+				dimensions to ensure a snug fit.</span
+			>
+			<img src="photos/preview/roughed out body.jpeg" class="lightbox" />
 
-            <h3>Fretboard</h3>
-            <span class="caption">I 3d printed a sanding block to make sure the radius is perfect. not done photos of the actual fingerboard yet</span>
-            <img src="photos/sandingblock.jpeg" />
-            <span class="caption">rough cut the perloid</span>
-            <img src="photos/cut out perloid.jpeg" />
-            
-            <span class="caption">slowly sanding back to the scalpel lines to ensure tiny tolerances for inlay</span>
-            <img src="photos/cut out perloid2.jpeg" />
+			<span class="caption">Most of the hardware</span>
+			<img src="photos/preview/parts.jpeg" class="lightbox" />
 
-
-
-            
-
-
-
-            <h3>Body</h3>
-            <span class="caption">Made a plywood template for the body for rough bandsawing followed by precision routing</span>
-<img src="photos/body template.jpeg" />
-
-
-
-<span class="caption">roughed out on bandsaw - leaving the area around the neck pocket as you don't want to do that until neck reaches its final dimensions to ensure a snug fit.</span>
-<img src="photos/roughed out body.jpeg" />
-
-<br /><br />
-<a href="design.html">(design draft doc)</a>
+			<br /><br />
+			<a href="design.html">(design draft doc)</a>
+		</div>
 	</body>
 </html>
